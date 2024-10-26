@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Seepossible
+ * @package Seepossible_Demo
+ * @copyright Copyright(C) 2015 Seepossible (contact@seepossible.com)
+ * @author Seepossible <contact@seepossible.com>
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<!-- sp_blog table starts. -->
+	<table name="sp_blog" resource="default" engine="innodb" comment="table">
+		<column xsi:type="int" name="demo_id" unsigned="true" nullable="false" identity="true" comment="Demo Id" />
+		<column xsi:type="varchar" name="title" length="1024" nullable="false" comment="Title" />
+		<column xsi:type="varchar" name="description" length="1024" nullable="false" comment="Description" />
+		<column xsi:type="varchar" name="is_active" length="1024" nullable="false" comment="Is Active" />
+		<column name="created_at" nullable="false" xsi:type="datetime" default="CURRENT_TIMESTAMP" on_update="false"/>
+		<column name="updated_at" nullable="true" xsi:type="datetime" default="CURRENT_TIMESTAMP" on_update="true"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="demo_id" />
+		</constraint>
+	</table>
+	<!-- sp_blog table ends. -->
+</schema>

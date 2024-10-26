@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Seepossible
+ * @package Seepossible_Demo
+ * @copyright Copyright(C) 2015 Seepossible (contact@seepossible.com)
+ * @author Seepossible <contact@seepossible.com>
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="Seepossible_demo_index_listing"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Seepossible
+ * @package Seepossible_Demo
+ * @copyright Copyright(C) 2015 Seepossible (contact@seepossible.com)
+ * @author Seepossible <contact@seepossible.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Seepossible_demo::core" title="Blog" module="Seepossible_Demo" sortOrder="20" resource="Seepossible_Demo::sample"/>
+
+        <add id="Seepossible_demo::test" title="Blog List" module="Seepossible_Demo" sortOrder="10" parent="Seepossible_demo::core" action="Seepossible_demo/items/" resource="Seepossible_Demo::items"/>
+    </menu>
+</config>

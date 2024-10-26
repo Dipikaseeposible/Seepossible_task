@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Seepossible
+ * @package Seepossible_Demo
+ * @copyright Copyright(C) 2015 Seepossible (contact@seepossible.com)
+ * @author Seepossible <contact@seepossible.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="admin">
+        <route id="Seepossible_demo" frontName="Seepossible_demo">
+            <module name="Seepossible_Demo" />
+        </route>
+    </router>
+</config>
