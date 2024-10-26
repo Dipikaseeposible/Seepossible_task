@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Seepossible
+ * @package Seepossible_Newsletter
+ * @copyright Copyright(C) 2015 Seepossible (contact@seepossible.com)
+ * @author Seepossible <contact@seepossible.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="custom.shipping.block" template="Seepossible_CMSblocks::cms_block_aftre_shipping.phtml" after="shipping-methods"/>
+
+             <block class="Magento\Framework\View\Element\Template" name="custom_block" template="Seepossible_CMSblocks::cms_block_sidebar.phtml" cacheable="false" />
+
+        </referenceContainer>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="custom_sidebar" xsi:type="array">
+                                            <item name="component" xsi:type="string">Seepossible_CMSblocks/js/view/custom_sidebar</item>
+                                            <item name="displayArea" xsi:type="string">summary</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Seepossible_CMSblocks/custom_sidebar
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

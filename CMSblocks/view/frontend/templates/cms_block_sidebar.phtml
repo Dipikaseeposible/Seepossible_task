@@ -1,0 +1,5 @@
+<?php
+ $summaryBlockDetail = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('sidebar_cms_block')->toHtml(); ?>
+<script type="text/javascript">
+	window.summaryBlockDetail = <?= json_encode($summaryBlockDetail)?>;
+</script>
