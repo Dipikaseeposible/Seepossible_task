@@ -1,0 +1,32 @@
+<?php
+/** @var \Seepossible\Demo\Block\Adminhtml\ProductGrid $block */
+?>
+<div>
+    <h2>Assign Products</h2>
+    <div id="product_grid">
+        <?php echo $block->getProductGridHtml(); ?>
+    </div>
+    <input type="hidden" name="selected_product_ids" id="selected_product_ids" value="" />
+</div>
+<script>
+    require(['jquery'], function ($) {
+        $(document).ready(function () {
+            let selectedIds = [];
+
+            // Monitor checkbox click within the product grid
+            $('#product_grid').on('change', 'input[name="product"][data-role="select-row"]', function () {
+                let productId = $(this).val();
+
+                if ($(this).is(':checked')) {
+                    if (!selectedIds.includes(productId)) {
+                        selectedIds.push(productId);
+                    }
+                } else {
+                    selectedIds = selectedIds.filter(id => id !== productId);
+                }
+                $('#item_selected_product_ids').val(selectedIds.join(','));
+                console.log(selectedIds);
+            });
+        });
+    });
+</script>

@@ -99,7 +99,7 @@ class Main extends Generic implements TabInterface
             'select',
             ['name' => 'is_active', 'label' => __('is_active'), 'title' => __('Is Active'),  'options'   => [0 => 'Disable', 1 => 'Enable'], 'required' => true]
         );
-      /* $fieldset->addField(
+        $fieldset->addField(
             'selected_product_ids',
             'hidden',
             [
@@ -108,8 +108,7 @@ class Main extends Generic implements TabInterface
                 'label' => __('Selected Product IDs'),
                 'title' => __('Selected Product IDs')
             ]
-        );*/
-        
+        );
         $form->setValues($model->getData());
         $this->setForm($form);
         return parent::_prepareForm();

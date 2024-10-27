@@ -21,6 +21,9 @@
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Seepossible\Demo\Block\Adminhtml\Items\Edit" name="test_items_edit"/>
+
+            <block class="Seepossible\Demo\Block\Adminhtml\ProductGridBlock" name="seepossible_product_grid_block" template="Seepossible_Demo::product/grid.phtml"/>
+
         </referenceContainer>
     </body>
 </page>

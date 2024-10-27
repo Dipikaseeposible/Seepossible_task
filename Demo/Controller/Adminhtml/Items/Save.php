@@ -59,7 +59,7 @@ class Save extends Action
                 $this->model->save();
                 $this->messageManager->addSuccessMessage(__('You saved the item.'));
                 $this->session->setPageData(false);
-                /*$block_id = $this->model->getId();
+                $block_id = $this->model->getId();
                 $sp_blog_data = $data['selected_product_ids'];
                 if ($sp_blog_data) {
                     $spdata = explode(",", $sp_blog_data);
@@ -72,7 +72,7 @@ class Save extends Action
                         $product->setData('sp_blog_id', implode(",", $existingBlocks));
                         $this->productRepository->save($product);
                     }
-                }*/
+                }
                 if ($this->getRequest()->getParam('back')) {
                     $this->_redirect('Seepossible_demo/*/edit', ['id' => $this->model->getId()]);
                     return;
